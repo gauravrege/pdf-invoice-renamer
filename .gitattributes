@@ -1,0 +1,4 @@
+# Keep line endings sane across tools. .bat files must stay CRLF.
+* text=auto
+*.bat text eol=crlf
+*.sh text eol=lf

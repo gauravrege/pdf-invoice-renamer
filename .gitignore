@@ -1,0 +1,31 @@
+# REAL CLIENT DATA - never commit. These hold live GST invoices with client
+# names, GST numbers, ticket numbers and passenger names on them. The renamed
+# copies in output/ are the same documents under a different name.
+input/*
+output/*
+code/training data/
+!input/.gitkeep
+!output/.gitkeep
+
+# Dependencies
+code/node_modules/
+web/node_modules/
+
+# Build output.
+#
+# code/tool.mjs is generated from code/src/ by `npm run build`, but it IS
+# committed on purpose: run.bat needs it and a machine that only runs run.bat
+# has no way to build it.
+#
+# The web bundles are the opposite - Vercel builds them on every deploy (see
+# vercel.json), so committing them would only mean two copies that can disagree.
+web/public/app.js
+web/public/app.js.map
+web/public/pdf.worker.mjs
+web/public/pdf.worker.mjs.map
+
+# Excel lock files, left behind while a workbook is open
+~$*
+
+# Local Vercel state
+.vercel

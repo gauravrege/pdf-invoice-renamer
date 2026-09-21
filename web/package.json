@@ -1,0 +1,19 @@
+{
+  "name": "pdf-invoice-renamer-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser version of the PDF Invoice Renamer. Reads invoices in the browser; nothing is uploaded.",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0",
+    "jszip": "3.10.1",
+    "pdfjs-dist": "4.10.38"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

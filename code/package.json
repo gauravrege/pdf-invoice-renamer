@@ -1,0 +1,21 @@
+{
+  "name": "pdf-invoice-renamer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reads the invoice number out of a PDF and saves a copy of the file under that number.",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0",
+    "pdfjs-dist": "4.10.38"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
